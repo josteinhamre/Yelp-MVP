@@ -5,13 +5,11 @@
       <h1 class="text-white m-0 font-weight-bold" style="font-size: 5rem; margin-bottom: -20px !important;"><%= @restaurant.name %></h1>
     </div>
     <div class="p-5 flex-grow-1">
-      <h4><%= @restaurant.category %></h4>
+      <h4>Cousine: <%= @restaurant.category %></h4>
       <p>Address: <%= @restaurant.address %></p>
       <p>Phone Number: <%= @restaurant.phone_number %></p>
-      <div class="d-flex justify-content-between">
-        <%= link_to 'edit', edit_restaurant_path(@restaurant), { :class=>"btn btn-primary" }  %>
-        <%= link_to 'add review', new_restaurant_review_path(@restaurant), { :class=>"btn btn-primary" }  %>
-        <%= link_to 'delete', restaurant_path(@restaurant), { :class=>"btn btn-danger", method: :delete } %>
+      <div class="d-flex">
+        <%= link_to 'add review', new_restaurant_review_path(@restaurant), { :class=>"btn btn-success text-white" }  %>
       </div>
     </div>
   </div>

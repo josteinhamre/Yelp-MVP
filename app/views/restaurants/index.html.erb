@@ -10,14 +10,10 @@
         <img src="https://source.unsplash.com/400x300/?dish" alt="food">
       </div>
       <div class="p-5 flex-grow-1">
-        <h2><%= link_to r.name, restaurant_path(r) %></h2>
-        <h4><%= r.category %></h4>
+        <h2><%= link_to r.name, restaurant_path(r), { :class=>"text-success" } %></h2>
+        <h4>Cousine: <%= r.category %></h4>
         <p>Address: <%= r.address %></p>
         <p>Phone Number: <%= r.phone_number %></p>
-        <div class="d-flex justify-content-between">
-          <%= link_to 'edit', edit_restaurant_path(r), { :class=>"btn btn-primary" }  %>
-          <%= link_to 'delete', restaurant_path(r), { :class=>"btn btn-danger" }  %>
-        </div>
       </div>
       </div>
     </div>
