@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 2019_09_18_090131) do
   create_table "reviews", force: :cascade do |t|
     t.text "content"
     t.integer "rating"
-    t.integer "resturants_id"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["resturants_id"], name: "index_reviews_on_resturants_id"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
 
 end
